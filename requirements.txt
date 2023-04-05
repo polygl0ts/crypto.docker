@@ -1,0 +1,8 @@
+pwntools
+
+pycryptodome
+gmpy2
+fastecdsa
+
+numpy
+galois
