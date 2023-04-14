@@ -3,8 +3,6 @@ FROM python:3.10
 COPY requirements.txt /root/requirements.txt
 RUN pip install -r /root/requirements.txt
 
-# allow passwordless su
-RUN passwd -d root
+WORKDIR /srv
 
-RUN useradd -m polygl0t -s /bin/bash
-CMD su - polygl0t
+CMD [ "jupyter", "notebook", "--allow-root", "--NotebookApp.token=", "--no-browser", "--ip=0.0.0.0", "--port=8888" ]

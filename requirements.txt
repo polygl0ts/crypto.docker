@@ -6,3 +6,5 @@ fastecdsa
 
 numpy
 galois
+
+jupyter
